@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        环境搭建 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/me.jpg" />
+        </div>
+        <div class="name">
+            <i>MSK</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#【服务器-电脑】环境搭建"><span class="toc-text">【服务器&#x2F;电脑】环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#MAC-tensorflow环境搭建"><span class="toc-text">MAC tensorflow环境搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jupyter-服务"><span class="toc-text">jupyter 服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#错误记录"><span class="toc-text">错误记录</span></a></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        环境搭建
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2020-03-25 21:42:15</span></span>
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h1 id="【服务器-电脑】环境搭建"><a href="#【服务器-电脑】环境搭建" class="headerlink" title="【服务器/电脑】环境搭建"></a>【服务器/电脑】环境搭建</h1><ul>
+<li><p>Mac电脑上下载Cyberduck，用于和服务器文件传输</p>
+</li>
+<li><p>Mac上官网下载Anaconda3，传到服务器上，<code>bash Anaconda3-5.0.1-Linux-x86_64.sh</code> 根据提示进行安装。（确认安装位置，YES同意条款等）</p>
+</li>
+<li><p>输入<code>conda --version</code> 如果提示conda命令没找到，那就需要配置环境变量</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-variable">$PATH</span> (然后复制下来现在的路径)<br>vi ~/.bashrc     //服务器上自己的用户下可以在~/.bashrc中添加PATH<br>末尾添加 PATH=<span class="hljs-string">'粘贴:/anaconda3/bin'</span><br>退出保存<br><span class="hljs-built_in">source</span> 检查有没有修改成功<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>输入 <code>conda --version</code> 如果出现版本就证明 anaconda 安装成功，接下来创建自己的环境。</p>
+</li>
+<li><p><a href="https://repo.continuum.io/archive/" target="_blank" rel="noopener">anaconda 各个版本的下载</a></p>
+</li>
+<li><p><a href="https://pypi.tuna.tsinghua.edu.cn/simple/" target="_blank" rel="noopener">清华镜像下载各种包</a></p>
+</li>
+<li><p>安装tensorflow</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install --ignore-installed --upgrade tensorflow-gpu==1.9.0 -i https://pypi.tuna.tsinghua.edu.cn/simple<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>安装opencv</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip3 install --ignore-installed --upgrade opencv-python -i https://pypi.tuna.tsinghua.edu.cn/simple<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>版本对应关系：tensorflow –&gt; python 3.5 –&gt; Anaconda3-4.2.0 </p>
+<p><a href="https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh" target="_blank" rel="noopener">Anaconda3-4.2.0-Linux-x86_64.sh</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/qq_39521554/article/details/82829886" target="_blank" rel="noopener">配置cuda环境变量</a></p>
+</li>
+<li><p>hello world!</p>
+</li>
+</ul>
+<p>参考文献：</p>
+<p><a href="https://www.jianshu.com/p/eaee1fadc1e9" target="_blank" rel="noopener">anaconda简明教程</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda env list <span class="hljs-comment"># 看conda虚拟环境列表</span><br><span class="hljs-built_in">source</span> activate tensorflow <span class="hljs-comment"># 激活tensorflow环境</span><br><span class="hljs-built_in">source</span> deactivate tensorflow <span class="hljs-comment"># 关闭tensorflow环境</span><br></code></pre></td></tr></table></figure>
+
+<p><a href="https://www.cnblogs.com/OctoptusLian/p/8961700.html" target="_blank" rel="noopener">linux用户普通用户超级用户切换</a></p>
+<p><a href="http://www.cnblogs.com/hust-chenming/p/4943268.html" target="_blank" rel="noopener">linux修改环境变量方法</a></p>
+<p><a href="https://www.cnblogs.com/hongzg1982/articles/2101792.html" target="_blank" rel="noopener">linux关于bashrc与profile的区别</a></p>
+<h2 id="MAC-tensorflow环境搭建"><a href="#MAC-tensorflow环境搭建" class="headerlink" title="MAC tensorflow环境搭建"></a>MAC tensorflow环境搭建</h2><blockquote>
+<p><a href="https://www.jianshu.com/p/d54546ab315e" target="_blank" rel="noopener">参考链接</a></p>
+</blockquote>
+<p>![image-20190118120621967](/Users/msk/Library/Application Support/typora-user-images/image-20190118120621967.png)</p>
+<h2 id="jupyter-服务"><a href="#jupyter-服务" class="headerlink" title="jupyter 服务"></a>jupyter 服务</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">jupyter notebook //打开服务<br></code></pre></td></tr></table></figure>
+
+
+
+<p>##matplotlib安装</p>
+<p><a href="https://blog.csdn.net/qiushuifuping/article/details/84667122" target="_blank" rel="noopener">注意问题</a></p>
+<h2 id="错误记录"><a href="#错误记录" class="headerlink" title="错误记录"></a>错误记录</h2><ul>
+<li><p>错误</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">root@TJUT:~<span class="hljs-comment"># sh Anaconda3-4.2.0-Linux-x86_64.sh</span><br>Anaconda3-4.2.0-Linux-x86_64.sh: 16: Anaconda3-4.2.0-Linux-x86_64.sh: 0: not found<br>Anaconda3-4.2.0-Linux-x86_64.sh: 61: Anaconda3-4.2.0-Linux-x86_64.sh: 0: not found<br>Anaconda3-4.2.0-Linux-x86_64.sh: 75: Anaconda3-4.2.0-Linux-x86_64.sh: Syntax error: word unexpected (expecting <span class="hljs-string">")"</span>)<br>root@TJUT:~<span class="hljs-comment"># packet_write_wait: Connection to 202.113.78.76 port 22: Broken pipe</span><br></code></pre></td></tr></table></figure>
+
+<p>不要用sh命令安装，要用bash命令安装</p>
+</li>
+<li><p>Mac配置环境变量总是失效原因</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">.zshrc  <span class="hljs-comment">#应该把环境变量在这个里面配置！！！ 然后再source .zshrc</span><br>.bash_profile<br>.bashrc<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>出现python代码中import文件无法导入的问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">多半是因为pycharm的anaconda环境没有配好。<br></code></pre></td></tr></table></figure>
+
+<p>![image-20190228162312922](/Users/msk/Library/Application Support/typora-user-images/image-20190228162312922.png)</p>
+<p>![image-20190228162345852](/Users/msk/Library/Application Support/typora-user-images/image-20190228162345852.png)</p>
+</li>
+</ul>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+        <li>
+            <a target="_blank" href="https://www.zhihu.com/people/ai-er-lan-xue-da">
+                            <span class="fa-stack fa-lg">
+                                 <i class="iconfont icon-zhihu"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank" href="http://weibo.com/3286578617">
+                            <span class="fa-stack fa-lg">
+                                  <i class="iconfont icon-weibo"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/AirCloud">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://www.linkedin.com/in/小涛-聂-80964aba">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-linkedin"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud" target="_blank" rel="noopener">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = ""
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>
