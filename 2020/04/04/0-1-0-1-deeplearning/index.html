@@ -11,7 +11,7 @@
 
     <title>
         
-        
+        深度学习零零碎碎 - undefined
         
     </title>
 
@@ -57,7 +57,7 @@
     </div>
     <div class="contents" id="nav-content">
         <ul>
-            <li  class=active >
+            <li >
                 <a href="/">
                     <i class="iconfont icon-shouye1"></i>
                     <span>主页</span>
@@ -85,6 +85,10 @@
         </ul>
     </div>
     
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#深度学习零零碎碎"><span class="toc-text">深度学习零零碎碎</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#卷积层"><span class="toc-text">卷积层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#上采样和下采样（降采样）"><span class="toc-text">上采样和下采样（降采样）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#膨胀卷积"><span class="toc-text">膨胀卷积</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ooling-layer"><span class="toc-text">ooling layer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GoogleNet-inception结构"><span class="toc-text">GoogleNet inception结构</span></a></li></ol></li></ol></li></ol>
+</div>
+    
 </div>
 
 
@@ -109,111 +113,85 @@
     <div class="index-middle">
         <!-- Main Content -->
         
-<div class="post-preview-container" style="min-height: 720px">
-    
-    <div class="post-preview">
-        <div class="post-time">2020-04-04</div>
-        <div class="post-info">
-            <a href="/2020/04/04/0-1-0-1-deeplearning/">
-                <h3>
-                    深度学习零零碎碎
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
+
+
+<div class="post-container">
+    <div class="post-title">
+        深度学习零零碎碎
     </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2020-03-26</div>
-        <div class="post-info">
-            <a href="/2020/03/26/CCF-paper/">
-                <h3>
-                    CCF-paper
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2020-04-04 20:53:30</span></span>
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
     </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2020-03-25</div>
-        <div class="post-info">
-            <a href="/2020/03/25/learn-about-xxx-net/">
-                <h3>
-                    learn about xxx-net
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2020-03-25</div>
-        <div class="post-info">
-            <a href="/2020/03/25/Oral-English/">
-                <h3>
-                    Oral English
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2020-03-25</div>
-        <div class="post-info">
-            <a href="/2020/03/25/JCR-papers/">
-                <h3>
-                    CCF papers
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2020-03-25</div>
-        <div class="post-info">
-            <a href="/2020/03/25/environment_build/">
-                <h3>
-                    环境搭建
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2020-03-25</div>
-        <div class="post-info">
-            <a href="/2020/03/25/hello-world/">
-                <h3>
-                    Hello World
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-</div>
-<ul class="pager">
-    
-    
+    <div class="post-content ">
+        <h1 id="深度学习零零碎碎"><a href="#深度学习零零碎碎" class="headerlink" title="深度学习零零碎碎"></a>深度学习零零碎碎</h1><h3 id="卷积层"><a href="#卷积层" class="headerlink" title="卷积层"></a>卷积层</h3><ul>
+<li>设计特点：<ul>
+<li>保持特征的不变形【invariance】</li>
+<li>对原图和input，做保留空间信息的扫描处理，截取一个个小图片做数据特征提取。（不全局处理）</li>
 </ul>
+</li>
+<li>设计优势：<ul>
+<li>每个特征需要参数极少</li>
+<li>模型变小，训练效率提升，避免模型过大的overfitting</li>
+<li>每个特征，都可以在原图和input的每个区域得到应用，产生了模型的invariance能力</li>
+</ul>
+</li>
+</ul>
+<h3 id="上采样和下采样（降采样）"><a href="#上采样和下采样（降采样）" class="headerlink" title="上采样和下采样（降采样）"></a>上采样和下采样（降采样）</h3><ul>
+<li><p>下采样（对信号的抽取，连续-离散）</p>
+<ul>
+<li>提取特征阶段</li>
+<li>会导致<strong>底层特征损失</strong>。<strong>但只要留下一条没有做下采样的分支，底层特征就不会损失。所以unet提出用skip connection保留细节。</strong>但unet的缺陷是是底层特征都没做什么变换就直接融合了，网络会不会非线性不够学习能力不行？</li>
+</ul>
+</li>
+<li><p>上采样（离散-连续，内插，增取样）</p>
+<ul>
+<li>恢复原始输入图像大小</li>
+<li>降低显存计算量，内存…</li>
+<li>增大感受野（使同样3*3的卷积能在更大的图像范围上进行特征提取。大感受野对分割任务很重要，小感受野是做不了多类分割的，而且分割出来的掩膜边界很粗糙）</li>
+<li>多出几条不同程度下采样的分支，可以很方便进行多尺度特征的融合。多级语义融合会让分类很准。</li>
+<li>主要手段有两种（1）转置卷积 （2）线性插值，现在主流网络大多是采用双线性插值的形式进行上采样。</li>
+<li>通过skip-connection将编码、解码对应层的特征拼接起来。考虑了高层特征也考虑了低层特征，分割效果更优</li>
+</ul>
+</li>
+</ul>
+<h3 id="膨胀卷积"><a href="#膨胀卷积" class="headerlink" title="膨胀卷积"></a>膨胀卷积</h3><ul>
+<li><p>可以增加感受野</p>
+</li>
+<li><p>【MULTI-SCALE CONTEXT AGGREGATION BY DILATED CONVOLUTIONS】</p>
+</li>
+<li><p>不考虑计算量和显存</p>
+</li>
+</ul>
+<h3 id="ooling-layer"><a href="#ooling-layer" class="headerlink" title="ooling layer"></a>ooling layer</h3><ul>
+<li>本质上：精简feature map数据量的同时，最大化保留空间信息和特征信息的处理技巧</li>
+<li>目的：通过对feature map进行压缩浓缩，给到后面的hidden layer的input就小了，计算效率能提升。</li>
+<li>比convolution更专注和易用</li>
+</ul>
+<h3 id="GoogleNet-inception结构"><a href="#GoogleNet-inception结构" class="headerlink" title="GoogleNet inception结构"></a>GoogleNet inception结构</h3><ul>
+<li>设计目的:<ul>
+<li>模型变宽变深,计算成本不增加</li>
+<li>模型提炼的特征,具备scale invariance的能力</li>
+</ul>
+</li>
+</ul>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
 
     </div>
 </div>
@@ -285,7 +263,7 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = ""
     window.hexo_root = "/"
-    window.isPost = false
+    window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 
