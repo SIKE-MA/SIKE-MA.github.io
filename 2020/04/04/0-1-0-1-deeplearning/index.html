@@ -86,7 +86,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#深度学习零零碎碎"><span class="toc-text">深度学习零零碎碎</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#卷积层"><span class="toc-text">卷积层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#上采样和下采样（降采样）"><span class="toc-text">上采样和下采样（降采样）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#膨胀卷积"><span class="toc-text">膨胀卷积</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ooling-layer"><span class="toc-text">ooling layer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GoogleNet-inception结构"><span class="toc-text">GoogleNet inception结构</span></a></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#卷积层"><span class="toc-text">卷积层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#上采样和下采样（降采样）"><span class="toc-text">上采样和下采样（降采样）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#膨胀卷积"><span class="toc-text">膨胀卷积</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pooling-layer"><span class="toc-text">Pooling layer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GoogleNet-inception结构"><span class="toc-text">GoogleNet inception结构</span></a></li></ol>
 </div>
     
 </div>
@@ -129,7 +129,7 @@
 </span>
     </div>
     <div class="post-content ">
-        <h1 id="深度学习零零碎碎"><a href="#深度学习零零碎碎" class="headerlink" title="深度学习零零碎碎"></a>深度学习零零碎碎</h1><h3 id="卷积层"><a href="#卷积层" class="headerlink" title="卷积层"></a>卷积层</h3><ul>
+        <h3 id="卷积层"><a href="#卷积层" class="headerlink" title="卷积层"></a>卷积层</h3><ul>
 <li>设计特点：<ul>
 <li>保持特征的不变形【invariance】</li>
 <li>对原图和input，做保留空间信息的扫描处理，截取一个个小图片做数据特征提取。（不全局处理）</li>
@@ -168,7 +168,7 @@
 <li><p>不考虑计算量和显存</p>
 </li>
 </ul>
-<h3 id="ooling-layer"><a href="#ooling-layer" class="headerlink" title="ooling layer"></a>ooling layer</h3><ul>
+<h3 id="Pooling-layer"><a href="#Pooling-layer" class="headerlink" title="Pooling layer"></a>Pooling layer</h3><ul>
 <li>本质上：精简feature map数据量的同时，最大化保留空间信息和特征信息的处理技巧</li>
 <li>目的：通过对feature map进行压缩浓缩，给到后面的hidden layer的input就小了，计算效率能提升。</li>
 <li>比convolution更专注和易用</li>
