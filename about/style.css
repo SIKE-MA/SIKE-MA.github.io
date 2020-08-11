@@ -59,8 +59,8 @@ ul li {
       width: 100%;
       text-align: center; }
       .wrap .left .logo img {
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
         border: 1px solid #000; }
     .wrap .left .view p.title, .wrap .left .aboutme p.title {
       text-indent: 0; }
