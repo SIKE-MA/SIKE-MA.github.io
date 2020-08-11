@@ -59,8 +59,8 @@ ul li {
       width: 100%;
       text-align: center; }
       .wrap .left .logo img {
-        width: 200px;
-        height: 200px;
+        width: 100px;
+        height: 100px;
         border: 1px solid #000; }
     .wrap .left .view p.title, .wrap .left .aboutme p.title {
       text-indent: 0; }
@@ -108,8 +108,8 @@ ul li {
     .wrap .right .name > div + p {
       font-size: 28px;
       margin-top: 15px; }
-    .wrap .right .experience ul > li {
-      margin-bottom: 30px; }
+/*    .wrap .right .experience ul > li {
+      margin-bottom: 30px; }*/
       .wrap .right .experience ul > li p {
         font-size: 20px;
         font-weight: 700; }
